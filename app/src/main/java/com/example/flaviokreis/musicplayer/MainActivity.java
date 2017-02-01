@@ -11,9 +11,6 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.playlists_button)
-    TextView playlistsButton;
-
     @BindView(R.id.artists_button)
     TextView artistsButton;
 
@@ -28,13 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-        playlistsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goToPlaylists();
-            }
-        });
 
         artistsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,11 +47,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    private void goToPlaylists(){
-        Intent intent = new Intent(this, PlaylistsActivity.class);
-        startActivity(intent);
     }
 
     private void goToArtists(){

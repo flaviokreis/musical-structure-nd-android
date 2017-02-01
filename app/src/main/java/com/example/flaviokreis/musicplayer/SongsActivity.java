@@ -4,23 +4,34 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class PlaylistsActivity extends AppCompatActivity {
+public class SongsActivity extends AppCompatActivity {
 
     @BindView(R.id.now_playing_button)
     TextView nowPlayingButton;
 
+    @BindView(R.id.music)
+    LinearLayout music;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_playlists);
+        setContentView(R.layout.activity_songs);
         ButterKnife.bind(this);
 
         nowPlayingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToNowPlaying();
+            }
+        });
+
+        music.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 goToNowPlaying();

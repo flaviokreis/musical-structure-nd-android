@@ -11,9 +11,35 @@
     tools:context="com.example.flaviokreis.musicplayer.ArtistsActivity">
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/artists"/>
+        android:text="@string/explain_artists"/>
+
+    <LinearLayout
+        android:id="@+id/artist"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/text"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+            android:text="@string/artist_1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/now_playing_button"

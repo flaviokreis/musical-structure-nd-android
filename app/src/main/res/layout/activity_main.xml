@@ -10,22 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.flaviokreis.musicplayer.MainActivity">
 
-    <TextView
-        android:id="@+id/playlists_button"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        style="@style/CustomButton"
-        android:background="#D32F2F"
-        android:text="@string/playlists" />
 
     <TextView
         android:id="@+id/artists_button"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         style="@style/CustomButton"
-        android:background="#0288D1"
-        android:text="@string/artists"
-        android:layout_below="@id/playlists_button"/>
+        android:background="#D32F2F"
+        android:text="@string/artists"/>
 
     <TextView
         android:id="@+id/albums_button"
